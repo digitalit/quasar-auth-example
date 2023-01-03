@@ -1,8 +1,17 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header bordered class="bg-primary text-white">
+    <q-header
+      bordered
+      class="bg-primary text-white"
+    >
       <q-toolbar>
-        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
+        <q-btn
+          dense
+          flat
+          round
+          icon="menu"
+          @click="toggleLeftDrawer"
+        />
 
         <q-toolbar-title>
           <q-avatar>
@@ -13,7 +22,12 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" side="left" overlay bordered>
+    <q-drawer
+      v-model="leftDrawerOpen"
+      side="left"
+      overlay
+      bordered
+    >
       <!-- drawer content -->
     </q-drawer>
 
@@ -27,12 +41,12 @@
 import { ref } from 'vue';
 
 export default {
-  setup() {
+  setup () {
     const leftDrawerOpen = ref(false);
 
     return {
       leftDrawerOpen,
-      toggleLeftDrawer() {
+      toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
     };
